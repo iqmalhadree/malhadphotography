@@ -1,0 +1,122 @@
+
+* {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    background: #252422;
+    height: 5vh;
+    width: 80vw;
+    color: #fffcf2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.logo, .directory {
+    color: #fffcf2;
+    padding: 20px;
+}
+
+a {
+    color: #fffcf2;
+    text-decoration: none;
+    padding: 7px;
+}
+
+.navbar a:hover {
+    color: #eb5e28;
+}
+
+.typography {
+    position: absolute;
+    top: 125px;
+    left: 200px;
+    color: #fffcf2;
+    font-size: 50px;
+}
+
+.description {
+    position: absolute;
+    top: 195px;
+    left: 200px;
+    color: #fffcf2;
+    font-size: 20px;
+}
+
+.top {
+    height: 45vh;
+    background: black;
+}
+
+.top img {
+    width: 100%;
+    max-height: 45vh;
+    object-fit: cover;
+}
+
+.categorycards {
+    width: 100%;
+    height: 50vh;
+    background: #fffcf2;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background: #252422;
+    margin: 2rem 1rem;
+    width: 350px;
+    height: fit-content;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    transition: ease-out;
+    position: relative;
+    box-shadow: 0px 0 7px #252422;
+}
+
+.seemore {
+   font-size: 90%; 
+   border-radius: 5px;
+   position: absolute;
+   bottom: 10px;
+   right: 10px;
+   padding: 1px 6px;
+   background: #eb5e28;
+}
+
+.image-card {
+    height: 225px;
+    background-size: cover;
+    background-position-y: 30%;
+}
+
+.product {
+    background-image: url('./product.jpg');
+}
+
+.potrait {
+    background-image: url('./potrait.jpg')
+}
+
+.landscape {
+    background-image: url('./landscape.jpg');
+}
+
+.card h2{
+    color: #fffcf2;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
