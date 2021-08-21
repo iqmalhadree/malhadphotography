@@ -8,12 +8,10 @@
 
 .navbar {
     position: fixed;
-    z-index: 1;
-    top: 0;
     left: 10%;
     right: 10%;
     background: #252422;
-    height: 5vh;
+    min-height: 5vh;
     width: 80vw;
     color: #fffcf2;
     display: flex;
@@ -25,52 +23,50 @@
 
 .logo, .directory {
     color: #fffcf2;
-    padding: 20px;
+    padding: 0.8em 2em;
 }
 
 a {
     color: #fffcf2;
     text-decoration: none;
-    padding: 7px;
+    padding-left: 0.5em;
 }
 
 .navbar a:hover {
     color: #eb5e28;
 }
 
-.typography {
-    position: absolute;
-    top: 125px;
-    left: 200px;
+.top .typography h1 {
+    padding: 8% 10% 0% 10%;
     color: #fffcf2;
-    font-size: 50px;
+    font-size: 3em;
 }
 
-.description {
-    position: absolute;
-    top: 195px;
-    left: 200px;
+.top .description p {
+    padding: 0 10% 0% 10%;
     color: #fffcf2;
-    font-size: 20px;
+    font-size: 1.3em;
 }
 
 .top {
-    height: 45vh;
-    background: black;
-}
-
-.top img {
-    width: 100%;
-    max-height: 45vh;
-    object-fit: cover;
+    background-image: url(./flatlay.jpg);
+    background-size: cover;
+    height: 350px;
+    width: 100vw;
 }
 
 .categorycards {
-    width: 100%;
-    height: 50vh;
+    margin: 0 auto;
     background: #fffcf2;
     display: flex;
     justify-content: center;
+
+}
+
+.card-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .card {
@@ -81,18 +77,20 @@ a {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     transition: ease-out;
-    position: relative;
     box-shadow: 0px 0 7px #252422;
 }
 
 .seemore {
-   font-size: 90%; 
-   border-radius: 5px;
-   position: absolute;
-   bottom: 10px;
-   right: 10px;
-   padding: 1px 6px;
-   background: #eb5e28;
+    padding: 0.1em 0.5em;
+    margin-right: 0.8em;
+    height: 80%;
+    background: #eb5e28;
+    border-radius: 20px;
+}
+
+.seemore a {
+    font-size: small;
+    padding: 0;
 }
 
 .image-card {
@@ -120,6 +118,23 @@ a {
     margin-bottom: 5px;
 }
 
+@media screen and (max-width: 1024px) {
+    body {
+        flex-direction: column;
+    }
+
+    .categorycards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top .typography {
+        padding-top: 15%;
+    }
+}
+
+/* about section */
+
 .about-main {
     background: #fffcf2;
     padding-top: 1vh;
@@ -134,19 +149,20 @@ a {
 .details{
     background: #252422;
     height: 65vh;
-    width: 40vw;
+    max-width: 700px;
     margin: 15vh auto;
     box-shadow: black 0px 0px 2em -1em;
     display: flex;
-    position: relative;
+    justify-content: space-evenly;
 }
 
 .picture {
+    width: 700px;
     height: 100%;
-    width: 200%;
     background-image: url('./me.jpg');
     background-size: cover;
-    position: center;
+    background-position: center;
+    overflow: hidden;
 }
 
 .row2 {
@@ -154,17 +170,32 @@ a {
     padding-right: 0.5em;
     display: flex;
     flex-direction: column;
-    align-content: flex-end;
 }
 
 .about{
     color: #eb5e28;
-}
-.picture img {
-    height: 100%;
-    margin: 0px auto;
+    padding: 1em;
+    padding-bottom: 0;
 }
 
 .info {
     color: #fffcf2;
+    padding: 1em;
+    padding-top: 0.5em;
+}
+
+@media screen and (max-width: 1024px)  {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .details {
+        flex-direction: column;
+        width: 300px;
+        margin-top: 10em;
+    }
+
+    .picture {
+        width: 100%;
+    }
 }
