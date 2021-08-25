@@ -1,0 +1,140 @@
+
+* {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    background: #252422;
+    min-height: 5vh;
+    width: 100%;
+    color: #fffcf2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo, .directory {
+    color: #fffcf2;
+    padding: 0.8em 2em;
+}
+
+a {
+    color: #fffcf2;
+    text-decoration: none;
+    padding-left: 0.5em;
+}
+
+.navbar a:hover {
+    color: #eb5e28;
+}
+
+.top .welcome {
+    padding-top: 10vh;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    color: #fffcf2;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.top .welcome h1 {
+    margin: 0 auto;
+}
+
+.top {
+    background-image: url(./flatlay.jpg);
+    background-size: cover;
+    height: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.categorycards {
+    padding-bottom: 100%;
+    background: #fffcf2;
+    display: flex;
+    justify-content: center;
+
+}
+
+.card-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card {
+    background: #252422;
+    margin: 2rem 1rem;
+    width: 350px;
+    height: fit-content;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    transition: ease-out;
+    box-shadow: 0px 0 7px #252422;
+}
+
+.seemore {
+    padding: 0.1em 0.5em;
+    margin-right: 0.8em;
+    height: 80%;
+    background: #eb5e28;
+    border-radius: 20px;
+}
+
+.seemore a {
+    font-size: small;
+    padding: 0;
+}
+
+.image-card {
+    height: 225px;
+    background-size: cover;
+    background-position-y: 30%;
+}
+
+.product {
+    background-image: url('./product.jpg');
+}
+
+.potrait {
+    background-image: url('./potrait.jpg')
+}
+
+.landscape {
+    background-image: url('./landscape.jpg');
+}
+
+.card h2{
+    color: #fffcf2;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        flex-direction: column;
+    }
+
+    .navbar{
+        flex-direction: column;
+    }
+    .categorycards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top .welcome{
+        padding-top: 22%;
+        font-size: 2em
+    }
+}
